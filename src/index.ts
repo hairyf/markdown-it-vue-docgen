@@ -5,7 +5,7 @@ import type { parse as _parse } from 'vue-docgen-api'
 import { TsRunner, createSyncFn } from 'synckit'
 import { format, normalizePath, parseEventType, parseProps, parseType, parseTypeExpand } from './utils'
 
-const parseFilePath = resolve(__dirname, './parse.ts')
+const parseFilePath = resolve(__dirname, './parse.mjs')
 const parse = createSyncFn<typeof _parse>(parseFilePath, {
   tsRunner: TsRunner.TSX,
 })
