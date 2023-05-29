@@ -4,5 +4,5 @@ outline: deep
 
 # Demo
 
-<stories src="./components/Basic.vue" />
+<vue-docgen src="./components/Basic.vue" />
 

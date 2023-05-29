@@ -10,7 +10,7 @@ const parse = createSyncFn<typeof _parse>(parseFilePath, {
   tsRunner: TsRunner.TSX,
 })
 
-export interface MarkdownVueStoriesOptions {
+export interface MarkdownVueDocsOptions {
   popup?: (text: string, content: string) => string
   dir?: string
 }
@@ -23,7 +23,7 @@ function popup(text: string, content: string) {
   return `<div style="text-decoration: underline;cursor: pointer; padding: 0 2px;" title="${content}">${text}</div>`
 }
 
-function use(md: MarkdownRenderer, { dir, ...opts }: MarkdownVueStoriesOptions = {}) {
+function use(md: MarkdownRenderer, { dir, ...opts }: MarkdownVueDocsOptions = {}) {
   function addRenderRule(type: string) {
     const defaultRender = md.renderer.rules[type]
     md.renderer.rules[type] = (tokens, idx, options, env, self) => {
@@ -32,13 +32,16 @@ function use(md: MarkdownRenderer, { dir, ...opts }: MarkdownVueStoriesOptions =
       if (!content.match(/^<stories\s/))
         return defaultRender!(tokens, idx, options, env, self)
 
-      const path = dir || env.path
+      let path = env.path
       const props = parseProps(content)
 
       if (!props.src) {
         console.error(`rendering ${path}: src prop is required`)
         return defaultRender!(tokens, idx, options, env, self)
       }
+
+      if (props.src.includes('~/') && dir)
+        path = dir
 
       const { src, title } = props
       const dirPath = dirname(path)

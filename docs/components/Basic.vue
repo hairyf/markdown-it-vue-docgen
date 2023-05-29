@@ -5,7 +5,7 @@ withDefaults(
   defineProps<{
     title: string
     /**
-   * 这是一个`可选`值
+   * This is an `optional` value
    */
     type?: 'text' | 'number' | 'digit' | 'password' | 'textarea'
   }>(),
@@ -16,7 +16,7 @@ withDefaults(
 
 const emit = defineEmits<{
   /**
-   * 这是一个 `click` 事件
+   * This is a `click` event
    */
   (type: 'click', event: string | number): void
 }>()
@@ -25,7 +25,7 @@ const value = ref('')
 
 defineExpose({
   /**
-   * 这是我暴露`出去`的组件属性
+   * This is the component property that I `expose`
    * @type {string|number}
    */
   a: value,
@@ -33,9 +33,9 @@ defineExpose({
 </script>
 
 <template>
-  <!-- @slot 这是一个默认插槽 -->
+  <!-- @slot This is a default slot -->
   <slot />
 
-  <!-- @slot 这是一个有`名字`的插槽 -->
+  <!-- @slot This is a slot with a `name` -->
   <slot name="body" />
 </template>
