@@ -29,7 +29,7 @@ function use(md: MarkdownRenderer, { dir, ...opts }: MarkdownVueDocsOptions = {}
     md.renderer.rules[type] = (tokens, idx, options, env, self) => {
       const token = tokens[idx]
       const content = token.content.trim()
-      if (!content.match(/^<stories\s/))
+      if (!content.match(/^<vue-docgen\s/))
         return defaultRender!(tokens, idx, options, env, self)
 
       let path = env.path
