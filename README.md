@@ -110,8 +110,6 @@ md.use(vueDocgen, {
 })
 ```
 
-![](./public/2.png)
-
 ## License
 
 [MIT](./LICENSE) License © 2022 [Hairyf](https://github.com/hairyf)
