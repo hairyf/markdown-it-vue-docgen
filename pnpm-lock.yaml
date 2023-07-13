@@ -16,9 +16,6 @@ importers:
       vue-docgen-api:
         specifier: ^4.72.3
         version: 4.72.3(vue@3.3.4)
-      vue3-popper:
-        specifier: ^1.5.0
-        version: 1.5.0(vue@3.3.4)
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^0.38.4
@@ -45,8 +42,8 @@ importers:
         specifier: ^8.37.0
         version: 8.37.0
       esno:
-        specifier: ^0.16.3
-        version: 0.16.3
+        specifier: ^0.17.0
+        version: 0.17.0
       lint-staged:
         specifier: ^13.2.0
         version: 13.2.0
@@ -895,10 +892,6 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       tslib: 2.5.0
-    dev: false
-
-  /@popperjs/core@2.11.8:
-    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
   /@rollup/plugin-alias@4.0.3(rollup@3.20.2):
@@ -1937,10 +1930,6 @@ packages:
   /csstype@3.1.2:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
-  /debounce@1.2.1:
-    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
-    dev: false
-
   /debug@3.2.7(supports-color@5.5.0):
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
     peerDependencies:
@@ -2581,8 +2570,8 @@ packages:
       - supports-color
     dev: true
 
-  /esno@0.16.3:
-    resolution: {integrity: sha512-6slSBEV1lMKcX13DBifvnDFpNno5WXhw4j/ff7RI0y51BZiDqEe5dNhhjhIQ3iCOQuzsm2MbVzmwqbN78BBhPg==}
+  /esno@0.17.0:
+    resolution: {integrity: sha512-w78cQGlptQfsBYfootUCitsKS+MD74uR5L6kNsvwVkJsfzEepIafbvWsx2xK4rcFP4IUftt4F6J8EhagUxX+Bg==}
     hasBin: true
     dependencies:
       tsx: 3.12.7
@@ -5158,17 +5147,6 @@ packages:
     peerDependencies:
       vue: '>=2'
     dependencies:
-      vue: 3.3.4
-    dev: false
-
-  /vue3-popper@1.5.0(vue@3.3.4):
-    resolution: {integrity: sha512-xaEnx90YBnlSg5G2yWqm2DHWHg+DB99UVRp4VsyTF0QLXyHrqSuE1Xo5+sG0AQq/lBcrGMlk5NU5xE2MDLKViw==}
-    engines: {node: '>=12'}
-    peerDependencies:
-      vue: ^3.2.20
-    dependencies:
-      '@popperjs/core': 2.11.8
-      debounce: 1.2.1
       vue: 3.3.4
     dev: false
 
