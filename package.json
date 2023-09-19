@@ -65,7 +65,7 @@
     "vue-docgen-api": "^4.72.3"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.4",
+    "@antfu/eslint-config": "^0.43.0",
     "@antfu/ni": "^0.21.2",
     "@antfu/utils": "^0.7.2",
     "@types/fs-extra": "^11.0.1",
