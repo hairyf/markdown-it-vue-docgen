@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.4",
-    "@antfu/ni": "^0.21.2",
+    "@antfu/ni": "^0.23.0",
     "@antfu/utils": "^0.7.2",
     "@types/fs-extra": "^11.0.1",
     "@types/markdown-it-container": "^2.0.5",
